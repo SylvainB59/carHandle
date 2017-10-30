@@ -96,9 +96,25 @@ textarea {
    ========================================================================== */
 
 /*start of common rules*/
+body{
+    background-color: grey;
+}
+
+.vehicle{
+    border: 2px solid black;
+}
 
 .car{
-    border: 2px solid black;
+    background-color: red;
+}
+
+.truck{
+    background-color: white;
+}
+
+.bike{
+    background-color: black;
+    color: white;
 }
 
 section article{

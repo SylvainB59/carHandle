@@ -6,6 +6,7 @@ function loadClass($class)
 }
 
 spl_autoload_register('loadClass');
+require('model/VehicleManager.php');
 
 
 

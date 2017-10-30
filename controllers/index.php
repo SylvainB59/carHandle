@@ -1,7 +1,11 @@
 <?php
 
+$VehicleManager = new VehicleManager();
+$vehicles = $VehicleManager->getAllVehicles();
+
 if(isset($_POST['validNewVehicle']))
 {
+	// create obj function of class type
 	if($_POST['type'] == 'car')
 	{
 		$newVehicle = new Car($_POST);
@@ -14,13 +18,17 @@ if(isset($_POST['validNewVehicle']))
 	{
 		$newVehicle = new Bike($_POST);
 	}
+
+	if(!empty($newVehicle))
+	{
+		$VehicleManager->addVehicle($newVehicle);
+		header('refresh: 0');
+	}
 }
 
 
 include "views/indexView.php";
 
-	var_dump($newVehicle);
-// var_dump($_POST);
 
 
 ?>
