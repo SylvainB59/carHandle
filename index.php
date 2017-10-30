@@ -24,7 +24,7 @@ elseif(isset($_POST['index']))
 else
 {
 	// initial load -> index
-	include('controllers/index.php.php');
+	include('controllers/index.php');
 }
 
 ?>

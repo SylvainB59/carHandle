@@ -32,11 +32,11 @@
                     <p class="col">
                         Type :<br>
                         <input type="radio" name="type" value="car" id="type1">
-                        <label for="type1">car</label>
+                        <label for="type1">Car</label>
                         <input type="radio" name="type" value="truck" id="type2">
-                        <label for="type2">truck</label>
+                        <label for="type2">Truck</label>
                         <input type="radio" name="type" value="bike" id="type3">
-                        <label for="type3">bike</label>
+                        <label for="type3">Bike</label>
                     </p>
                     <p class="col">
                         <label for="color">Mileage : </label>

@@ -1,6 +1,6 @@
 <?php
 
-class Vehicle
+abstract class Vehicle
 {
 	protected $id;
 	protected $model;
@@ -110,15 +110,19 @@ class Vehicle
 
     public function __construct($data)
     {
-    	$this->hydrate($data)
+    	$this->hydrate($data);
     }
 
     public function hydrate($data)
     {
-    	foreach($data as $method => $value)
+    	foreach($data as $key => $value)
     	{
-    		$method = 'set'.ucfirst($method).'.php';
-    		echo $method;
+    		$method = 'set'.ucfirst($key);
+    		// echo $method;
+    		if(method_exists($this, $method))
+    		{
+				$this->$method($value);
+    		}
     	}
     }
 }
