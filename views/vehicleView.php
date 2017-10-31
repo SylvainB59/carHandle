@@ -1,13 +1,6 @@
 <?php
-	include("template/header.php");
-// foreach($vehicle as $key => $value)
-// {
-	// echo '<pre>';
-	// var_dump($vehicle);
-	// echo '</pre>';
-	// echo $vehicle;
-// }
 
+	include("template/header.php");
 
 ?>
 
@@ -36,9 +29,17 @@ foreach($vehicle as $key => $value)
 ?>
 			</tbody>
 		</table>
+		<form action="" method="POST" class="col-12 col-lg-5 mx-auto mt-4 row">
+			<input type="hidden" value="<?php echo $vehicle->getId(); ?>" name="vehicleId">
+			<input type="submit" value="Edit" name="vehicleEdit" class="col-6 col-md-6 col-lg-6">
+			<input type="submit" value="Delete" name="vehicleDelete" class="col-6 col-md-6 col-lg-6">
+			<input type="submit" value="Back" name="index" class="col-12">
+		</form>
 	</div>
 </section>
 
 <?php
+
 	include("template/footer.php");
+
 ?>

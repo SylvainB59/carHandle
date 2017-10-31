@@ -101,6 +101,10 @@ body{
     text-align: center;
 }
 
+/*Enc of common rules*/
+
+/*START OF ASIDE*/
+
 .formAdd p{
     display: flex;
     flex-direction: column;
@@ -112,6 +116,10 @@ body{
     background-color: white;
 }
 
+/*END OF ASIDE*/
+
+/*START OF SECTION*/
+    /*index section*/
 .vehicle{
     border: 2px solid black;
     transition: 0.2s;
@@ -125,6 +133,12 @@ body{
     border: 1px solid black;
     border-radius: 0;
     background-color: white;
+    transition: 0.5s;
+}
+
+.vehicle input[type=submit]:hover{
+    background-color: black;
+    color: white;
 }
 
 .car{
@@ -147,6 +161,7 @@ section article{
     align-items: stretch;
 }
 
+    /*vehicle section*/
 #table{
     text-align: center;
     /*background-color: white;*/
@@ -171,14 +186,6 @@ thead, tbody{
     background-color: lightblue;
     transition: 0.5s;
 }
-
-/*Enc of common rules*/
-
-/*START OF HEADER*/
-
-/*END OF HEADER*/
-
-/*START OF SECTION*/
 
 /*END OF SECTION*/
 

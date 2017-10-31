@@ -12,6 +12,12 @@ if(isset($_POST['validNewVehicle']))
 	}
 }
 
+if(isset($_POST['vehicleDelete']))
+{
+	$vehicleToDelete = $VehicleManager->getVehicleDetail($_POST['vehicleId']);
+	$VehicleManager->delVehicle($vehicleToDelete->getId());
+}
+
 
 include "views/indexView.php";
 

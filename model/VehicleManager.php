@@ -20,9 +20,13 @@ class VehicleManager
 		));
 	}
 
-	public function delVehicle()
+	public function delVehicle($vehicleId)
 	{
-
+		$req = $this->getBdd()->prepare('DELETE FROM vehicle WHERE id = :id');
+		$req->execute(array(
+			'id' => $vehicleId
+		));
+		header('refresh:0');
 	}
 
 	public function updateVehicle()
