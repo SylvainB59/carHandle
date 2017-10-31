@@ -26,7 +26,7 @@ class Car extends Vehicle
 
     public function __construct($data)
     {
-    	parent::hydrate($data);
+    	parent::__construct($data);
     }
 }
 

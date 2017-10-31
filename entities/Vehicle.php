@@ -125,6 +125,18 @@ abstract class Vehicle
     		}
     	}
     }
+
+    public function afficherTableau()
+    {
+    	foreach($this as $key => $value)
+    	{
+    		echo
+    		'<tr class="col-12 row tableLigne">
+				<td class="col-6">'.$key.'</td>
+				<td class="col-6">'.$value.'</td>
+			</tr>';
+	  	}
+    }
 }
 
 ?>

@@ -6,7 +6,29 @@ function loadClass($class)
 }
 
 spl_autoload_register('loadClass');
+
 require('model/VehicleManager.php');
+
+$VehicleManager = new VehicleManager();
+$vehicles = $VehicleManager->getAllVehicles();
+
+function arrayToObj($array)
+{
+	// create obj function of class type
+	if($array['type'] == 'car')
+	{
+		$newVehicle = new Car($array);
+	}
+	elseif($array['type'] == 'truck')
+	{
+		$newVehicle = new Truck($array);
+	}
+	elseif($array['type'] == 'bike')
+	{
+		$newVehicle = new Bike($array);
+	}
+	return $newVehicle;
+}
 
 
 

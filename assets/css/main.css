@@ -97,11 +97,34 @@ textarea {
 
 /*start of common rules*/
 body{
-    background-color: grey;
+    background-color: #DDD;
+    text-align: center;
+}
+
+.formAdd p{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.formulaire{
+    border: 2px solid black;
+    background-color: white;
 }
 
 .vehicle{
     border: 2px solid black;
+    transition: 0.2s;
+}
+
+.vehicle:hover{
+    box-shadow: 10px 10px 10px #000;
+}
+
+.vehicle input[type=submit]{
+    border: 1px solid black;
+    border-radius: 0;
+    background-color: white;
 }
 
 .car{
@@ -124,8 +147,29 @@ section article{
     align-items: stretch;
 }
 
-section article{
-    /*align-self: flex-end;*/
+#table{
+    text-align: center;
+    /*background-color: white;*/
+}
+
+#table * {
+    margin: 0;
+    padding: 0;
+}
+
+thead, tbody{
+    border: 3px solid black;
+}
+
+#table th, #table td{
+    border: 1px solid black;
+    background-color: white;
+    padding: 10px;
+}
+
+#table tr:hover td{
+    background-color: lightblue;
+    transition: 0.5s;
 }
 
 /*Enc of common rules*/
@@ -146,6 +190,10 @@ section article{
 /*~~~~~ START OF TABLETTE ~~~~~*/
 @media (min-width: 768px) {
     /*start of common rules*/
+
+    .formAdd .inputRadio{
+        flex-direction: row;
+    }
 
     section article{
         /*display: flex;*/
